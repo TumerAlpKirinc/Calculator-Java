@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class createCalculator {
 
-    boolean iceriyorMu = false;
+    boolean IsContain = false;
 
     public static void main(String[] args) {
         createCalculator c = new createCalculator();
@@ -37,125 +37,125 @@ public class createCalculator {
         cal.add(textField);
         cal.add(history);
 
-        JButton r0 = createButton("0",100,350,cal);
-        JButton r1 = createButton("1",25,125,cal);
-        JButton r2 = createButton("2",100,125,cal);
-        JButton r3 = createButton("3",175,125,cal);
-        JButton r4 = createButton("4",25,200,cal);
-        JButton r5 = createButton("5",100,200,cal);
-        JButton r6 =  createButton("6",175,200,cal);
-        JButton r7 = createButton("7",25,275,cal);
-        JButton r8 = createButton("8",100,275,cal);
-        JButton r9 = createButton("9",175,275,cal);
-        JButton arti = createButton("+",250,125,cal);
-        JButton eksi = createButton("-",250,200,cal);
-        JButton carpi = createButton("*",250,275,cal);
-        JButton nokta = createButton(".",175,350,cal);
+        JButton n0 = createButton("0",100,350,cal);
+        JButton n1 = createButton("1",25,125,cal);
+        JButton n2 = createButton("2",100,125,cal);
+        JButton n3 = createButton("3",175,125,cal);
+        JButton n4 = createButton("4",25,200,cal);
+        JButton n5 = createButton("5",100,200,cal);
+        JButton n6 =  createButton("6",175,200,cal);
+        JButton n7 = createButton("7",25,275,cal);
+        JButton n8 = createButton("8",100,275,cal);
+        JButton n9 = createButton("9",175,275,cal);
+        JButton plus = createButton("+",250,125,cal);
+        JButton minus = createButton("-",250,200,cal);
+        JButton times = createButton("*",250,275,cal);
+        JButton dot = createButton(".",175,350,cal);
         JButton clear = createButton("C",25,350,cal);
-        JButton bolu = createButton("÷",250,350,cal);
-        JButton esittir = createButton("=",325,350,cal);
-        JButton us = createButton("^",325,275,cal);
+        JButton divide = createButton("÷",250,350,cal);
+        JButton equal = createButton("=",325,350,cal);
+        JButton power = createButton("^",325,275,cal);
         JButton cos = createButton("cos",325,200,cal);
         Font font = new Font("Arial",Font.BOLD,9);
         cos.setFont(font);
         JButton sin = createButton("sin",325,125,cal);
         sin.setFont(font);
-        char[] isaretler = {'+','-','*','÷','.','^'};
-        r0.addActionListener(new ActionListener() {
+        char[] symbols = {'+','-','*','÷','.','^'};
+        n0.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(!textField.getText().equals("0"))
-                    textField.setText(textField.getText()+r0.getText());
+                    textField.setText(textField.getText()+n0.getText());
                 writehistory(history,"0");
             }
         });
-        r1.addActionListener(new ActionListener() {
+        n1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(!textField.getText().equals("0"))
-                    textField.setText(textField.getText()+r1.getText());
+                    textField.setText(textField.getText()+n1.getText());
                 else
-                    textField.setText(r1.getText());
+                    textField.setText(n1.getText());
                 writehistory(history,"1");
             }
         });
-        r2.addActionListener(new ActionListener() {
+        n2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(!textField.getText().equals("0"))
-                    textField.setText(textField.getText()+r2.getText());
+                    textField.setText(textField.getText()+n2.getText());
                 else
-                    textField.setText(r2.getText());
+                    textField.setText(n2.getText());
                 writehistory(history,"2");
             }
         });
-        r3.addActionListener(new ActionListener() {
+        n3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(!textField.getText().equals("0"))
-                    textField.setText(textField.getText()+r3.getText());
+                    textField.setText(textField.getText()+n3.getText());
                 else
-                    textField.setText(r3.getText());
+                    textField.setText(n3.getText());
                 writehistory(history,"3");
             }
         });
-        r4.addActionListener(new ActionListener() {
+        n4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(!textField.getText().equals("0"))
-                    textField.setText(textField.getText()+r4.getText());
+                    textField.setText(textField.getText()+n4.getText());
                 else
-                    textField.setText(r4.getText());
+                    textField.setText(n4.getText());
                 writehistory(history,"4");
             }
         });
-        r5.addActionListener(new ActionListener() {
+        n5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(!textField.getText().equals("0"))
-                    textField.setText(textField.getText()+r5.getText());
+                    textField.setText(textField.getText()+n5.getText());
                 else
-                    textField.setText(r5.getText());
+                    textField.setText(n5.getText());
                 writehistory(history,"5");
             }
         });
-        r6.addActionListener(new ActionListener() {
+        n6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(!textField.getText().equals("0"))
-                    textField.setText(textField.getText()+r6.getText());
+                    textField.setText(textField.getText()+n6.getText());
                 else
-                    textField.setText(r6.getText());
+                    textField.setText(n6.getText());
                 writehistory(history,"6");
             }
         });
-        r7.addActionListener(new ActionListener() {
+        n7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(!textField.getText().equals("0"))
-                    textField.setText(textField.getText()+r7.getText());
+                    textField.setText(textField.getText()+n7.getText());
                 else
-                    textField.setText(r7.getText());
+                    textField.setText(n7.getText());
                 writehistory(history,"7");
             }
         });
-        r8.addActionListener(new ActionListener() {
+        n8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(!textField.getText().equals("0"))
-                    textField.setText(textField.getText()+r8.getText());
+                    textField.setText(textField.getText()+n8.getText());
                 else
-                    textField.setText(r8.getText());
+                    textField.setText(n8.getText());
                 writehistory(history,"8");
             }
         });
-        r9.addActionListener(new ActionListener() {
+        n9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(!textField.getText().equals("0"))
-                    textField.setText(textField.getText()+r9.getText());
+                    textField.setText(textField.getText()+n9.getText());
                 else
-                    textField.setText(r9.getText());
+                    textField.setText(n9.getText());
                 writehistory(history,"9");
             }
         });
@@ -166,170 +166,170 @@ public class createCalculator {
                 history.setText(null);
             }
         });
-        arti.addActionListener(new ActionListener() {
+        plus.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String str = textField.getText();
                 char a = str.charAt(str.length()-1);
                 int n = str.length()-2;
-                for (int i=0;i<isaretler.length;i++){
-                    if (isaretler[i] == a) {
-                        iceriyorMu = true;
+                for (int i=0;i<symbols.length;i++){
+                    if (symbols[i] == a) {
+                        IsContain = true;
                         break;
                     }
                 }
-                if (iceriyorMu) {
-                    String yeni = str.substring(0,str.length()-1);
-                    yeni = yeni+"+";
+                if (IsContain) {
+                    String newstring = str.substring(0,str.length()-1);
+                    newstring = newstring+"+";
 
-                    textField.setText(yeni);
+                    textField.setText(newstring);
                     changeHistoryOperator(history,"+");
                 }
                 else {
-                    textField.setText(textField.getText() + arti.getText());
+                    textField.setText(textField.getText() + plus.getText());
                     writehistory(history,"+");
                 }
-                iceriyorMu=false;
+                IsContain =false;
                 arrayList.add(str);
                 operators.add("+");
                 textField.setText(null);
             }
         });
-        eksi.addActionListener(new ActionListener() {
+        minus.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String str = textField.getText();
                 char a = str.charAt(str.length()-1);
-                for (int i=0;i<isaretler.length;i++){
-                    if (isaretler[i] == a) {
-                        iceriyorMu = true;
+                for (int i=0;i<symbols.length;i++){
+                    if (symbols[i] == a) {
+                        IsContain = true;
                         break;
                     }
                 }
-                if (iceriyorMu) {
-                    String yeni = str.substring(0,str.length()-1);
-                    yeni = yeni+"-";
-                    textField.setText(yeni);
+                if (IsContain) {
+                    String newstring = str.substring(0,str.length()-1);
+                    newstring = newstring+"-";
+                    textField.setText(newstring);
                     changeHistoryOperator(history,"-");
 
                 }
                 else {
-                    textField.setText(textField.getText() + eksi.getText());
+                    textField.setText(textField.getText() + minus.getText());
                     writehistory(history,"-");
                 }
-                iceriyorMu=false;
+                IsContain =false;
                 arrayList.add(str);
                 operators.add("-");
                 textField.setText(null);
             }
         });
-        bolu.addActionListener(new ActionListener() {
+        divide.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String str = textField.getText();
                 char a = str.charAt(str.length()-1);
-                for (int i=0;i<isaretler.length;i++){
-                    if (isaretler[i] == a) {
-                        iceriyorMu = true;
+                for (int i=0;i<symbols.length;i++){
+                    if (symbols[i] == a) {
+                        IsContain = true;
                         break;
                     }
                 }
-                if (iceriyorMu) {
-                    String yeni = str.substring(0,str.length()-1);
-                    yeni = yeni+"÷";
-                    textField.setText(yeni);
+                if (IsContain) {
+                    String newstring = str.substring(0,str.length()-1);
+                    newstring = newstring+"÷";
+                    textField.setText(newstring);
                     changeHistoryOperator(history,"÷");
 
                 }
                 else {
-                    textField.setText(textField.getText() + bolu.getText());
+                    textField.setText(textField.getText() + divide.getText());
                     writehistory(history,"÷");
                 }
-                iceriyorMu=false;
+                IsContain =false;
                 arrayList.add(str);
                 operators.add("/");
                 textField.setText(null);
             }
         });
-        carpi.addActionListener(new ActionListener() {
+        times.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String str = textField.getText();
                 char a = str.charAt(str.length()-1);
-                for (int i=0;i<isaretler.length;i++){
-                    if (isaretler[i] == a) {
-                        iceriyorMu = true;
+                for (int i=0;i<symbols.length;i++){
+                    if (symbols[i] == a) {
+                        IsContain = true;
                         break;
                     }
                 }
-                if (iceriyorMu) {
-                    String yeni = str.substring(0,str.length()-1);
-                    yeni = yeni+"*";
-                    textField.setText(yeni);
+                if (IsContain) {
+                    String newstring = str.substring(0,str.length()-1);
+                    newstring = newstring+"*";
+                    textField.setText(newstring);
                     changeHistoryOperator(history,"*");
                 }
                 else {
-                    textField.setText(textField.getText() + carpi.getText());
+                    textField.setText(textField.getText() + times.getText());
                     writehistory(history,"*");
                 }
-                iceriyorMu=false;
+                IsContain =false;
                 arrayList.add(str);
                 operators.add("*");
                 textField.setText(null);
             }
         });
-        us.addActionListener(new ActionListener() {
+        power.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String str = textField.getText();
                 char a = str.charAt(str.length()-1);
-                for (int i=0;i<isaretler.length;i++){
-                    if (isaretler[i] == a) {
-                        iceriyorMu = true;
+                for (int i=0;i<symbols.length;i++){
+                    if (symbols[i] == a) {
+                        IsContain = true;
                         break;
                     }
                 }
-                if (iceriyorMu) {
-                    String yeni = str.substring(0,str.length()-1);
-                    yeni = yeni+"^";
-                    textField.setText(yeni);
+                if (IsContain) {
+                    String newstring = str.substring(0,str.length()-1);
+                    newstring = newstring+"^";
+                    textField.setText(newstring);
                     changeHistoryOperator(history,"^");
 
                 }
                 else {
-                    textField.setText(textField.getText() + us.getText());
+                    textField.setText(textField.getText() + power.getText());
                     writehistory(history,"^");
                 }
-                iceriyorMu=false;
+                IsContain =false;
                 arrayList.add(str);
                 operators.add("^");
                 textField.setText(null);
 
             }
         });
-        nokta.addActionListener(new ActionListener() {
+        dot.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String str = textField.getText();
                 char a = str.charAt(str.length()-1);
-                for (int i=0;i<isaretler.length;i++){
-                    if (isaretler[i] == a) {
-                        iceriyorMu = true;
+                for (int i=0;i<symbols.length;i++){
+                    if (symbols[i] == a) {
+                        IsContain = true;
                         break;
                     }
                 }
-                if (iceriyorMu) {
-                    String yeni = str.substring(0,str.length()-1);
-                    yeni = yeni+".";
-                    textField.setText(yeni);
+                if (IsContain) {
+                    String newstring = str.substring(0,str.length()-1);
+                    newstring = newstring+".";
+                    textField.setText(newstring);
                     changeHistoryOperator(history,".");
 
                 }
                 else {
-                    textField.setText(textField.getText() + nokta.getText());
+                    textField.setText(textField.getText() + dot.getText());
                     writehistory(history,".");
                 }
-                iceriyorMu=false;
+                IsContain =false;
                 arrayList.add(str);
                 operators.add(".");
                 textField.setText(null);
@@ -351,7 +351,7 @@ public class createCalculator {
                 textField.setText(String.valueOf(Math.cos(num)));
             }
         });
-        esittir.addActionListener(new ActionListener() {
+        equal.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String str = textField.getText();
@@ -362,15 +362,15 @@ public class createCalculator {
 
                 for(int i=0;i<operators.size();i++){
                     if(operators.get(i)=="."){
-                        double ana = Double.parseDouble(arrayList.get(i));
-                        double kusurat = Double.parseDouble(arrayList.get(i+1));
+                        double integerPart = Double.parseDouble(arrayList.get(i));
+                        double decimalPart = Double.parseDouble(arrayList.get(i+1));
                         int bolum = arrayList.get(i+1).length();
                         int a=1;
                         for(int j=0;j<bolum;j++)
                             a *= 10;
-                        kusurat = kusurat/a;
-                        ana = ana + kusurat;
-                        arrayList.set(i,Double.toString(ana));
+                        decimalPart = decimalPart/a;
+                        integerPart = integerPart + decimalPart;
+                        arrayList.set(i,Double.toString(integerPart));
                         arrayList.remove(i+1);
                         operators.remove(i);
                     }
